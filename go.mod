@@ -1,3 +1,3 @@
 module github.com/go-kid/ascii-table
 
-go 1.23.1
+go 1.18

@@ -26,6 +26,13 @@ func (t *Table) AddHeader(header string) *Table {
 	return t
 }
 
+func (t *Table) AddHeaders(headers ...string) *Table {
+	for _, header := range headers {
+		t.addHeader(header, 0)
+	}
+	return t
+}
+
 func (t *Table) AddItem(header string, item string) *Table {
 	t.addHeader(header, len(item))
 	t.items[header] = append(t.items[header], item)
